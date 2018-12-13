@@ -1,0 +1,163 @@
+[{
+	"name": "version---2.0"
+}, {
+	"name": "routes",
+	"children": [{
+		"name": "DoHostSearch",
+		"children": [{
+			"name": "version---1.0"
+		}, {
+			"name": "method---GET"
+		}, {
+			"name": "URI---/hostsearch"
+		}, {
+			"name": "component---felicity-awx"
+		}, {
+			"name": "handler---SearchHostsInAWX"
+		}]
+	}, {
+		"name": "GetJobsForHost",
+		"children": [{
+			"name": "version---1.0"
+		}, {
+			"name": "method---GET"
+		}, {
+			"name": "URI---/getjobs"
+		}, {
+			"name": "component---felicity-awx"
+		}, {
+			"name": "handler---GetJobsForHost"
+		}]
+	}, {
+		"name": "RunJob",
+		"children": [{
+			"name": "version---1.0"
+		}, {
+			"name": "method---GET"
+		}, {
+			"name": "URI---/runjob"
+		}, {
+			"name": "component---felicity-awx"
+		}, {
+			"name": "handler---RunJobForHost"
+		}]
+	}, {
+		"name": "GetJobStatus",
+		"children": [{
+			"name": "version---1.0"
+		}, {
+			"name": "method---GET"
+		}, {
+			"name": "URI---/getjobstatus"
+		}, {
+			"name": "component---felicity-awx"
+		}, {
+			"name": "handler---GetJobStatus"
+		}]
+	}]
+}, {
+	"name": "components",
+	"children": [{
+		"name": "hydra",
+		"children": [{
+			"name": "version---1.0"
+		}, {
+			"name": "apis",
+			"children": [{
+				"name": "Login",
+				"children": []
+			}, {
+				"name": "LoginValidator",
+				"children": []
+			}, {
+				"name": "IsValidUser",
+				"children": []
+			}, {
+				"name": "GetListOfAPIs",
+				"children": []
+			}]
+		}]
+	}, {
+		"name": "felicity-awx",
+		"children": [{
+			"name": "version---1.0"
+		}, {
+			"name": "url---http://192.168.2.84/api/v2"
+		}, {
+			"name": "client-id---gEY1sryitkoCf7tkRCXxF9rmeDczf4jVSiBPunrO"
+		}, {
+			"name": "api-name---Felicia"
+		}, {
+			"name": "apis",
+			"children": [{
+				"name": "PersonalLogin",
+				"children": [{
+					"name": "version---1.0"
+				}, {
+					"name": "URI---/users/1/personal_tokens/"
+				}, {
+					"name": "parameters",
+					"children": [{
+						"name": "Username---admin"
+					}, {
+						"name": "Password---password"
+					}]
+				}]
+			}, {
+				"name": "HostSearch",
+				"children": [{
+					"name": "version---1.0"
+				}, {
+					"name": "URI---/hosts/?name=<replace>"
+				}]
+			}, {
+				"name": "GetJobs",
+				"children": [{
+					"name": "version---1.0"
+				}, {
+					"name": "URI---/inventories/<replace>/job_templates/"
+				}]
+			}, {
+				"name": "RunJob",
+				"children": [{
+					"name": "version---1.0"
+				}, {
+					"name": "URI---/job_templates/<replace>/launch/"
+				}]
+			}, {
+				"name": "GetJobStatus",
+				"children": [{
+					"name": "version---1.0"
+				}, {
+					"name": "URI---/jobs/<replace>/"
+				}]
+			}]
+		}]
+	}, {
+		"name": "felicity-sd",
+		"children": [{
+			"name": "version---1.0"
+		}, {
+			"name": "url---http://192.168.2.166/felicity/nph-genericinterface.pl/Webservice"
+		}, {
+			"name": "apis",
+			"children": [{
+				"name": "GetTicketInfo",
+				"children": [{
+					"name": "version---1.0"
+				}, {
+					"name": "URI---/TicketAPI/TicketInfo"
+				}, {
+					"name": "parameters",
+					"children": [{
+						"name": "TicketID---123"
+					}, {
+						"name": "UserLogin---abhik"
+					}, {
+						"name": "Password---abhik"
+					}]
+				}]
+			}]
+		}]
+	}]
+}]
