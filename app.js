@@ -44,6 +44,25 @@ const generateTree = async data => {
   });
 };
 
+
+const reverseTree = async data => {
+const retTree = {}
+
+for x in data {
+if (x.hasOwnProperty("children")) {
+retTree[x["name"]] = reverseTree(x["children"])
+} else {
+	if x["name"].indexOf("---") !== -1{
+  	var spl = x["name"].split("---")
+    if spl.length() > 0{
+    	retTree[spl[0]] = spl[1]
+    }
+  }
+}
+};
+
+console.log(retTree)
+};
 getJSON("./sample.json")
   .then(generateTree)
   .catch(error => console.error(error));
